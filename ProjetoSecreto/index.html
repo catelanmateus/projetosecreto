@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz do Amor</title>
+    <meta name="description" content="Um quiz especial que termina com um pedido muito importante." />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <section id="start-screen" class="screen screen--center">
+        <div class="card">
+          <div class="start-image-container">
+            <img src="./assets/images/eu dando joia.jpeg" alt="Foto do criador do quiz" class="start-image">
+          </div>
+          <h1>Você está pronta para iniciar o Quiz?</h1>
+          <div class="start-actions">
+            <button id="start-btn" class="btn btn--primary">Sim</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="instructions-screen" class="screen screen--center" hidden>
+        <div class="card">
+          <h1>Instruções</h1>
+          <p class="lead">Para avançar de questão, tem que responder a alternativa correta.</p>
+          <div class="start-actions">
+            <button id="instructions-btn" class="btn btn--primary">Avançar para o Quiz</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz-screen" class="screen" hidden>
+        <div class="card">
+          <div class="quiz-header">
+            <div id="progress-text" class="progress-text">Pergunta 1 de 8</div>
+            <div class="progress" aria-hidden="true">
+              <div id="progress-bar" class="progress__bar" style="width: 0%"></div>
+            </div>
+          </div>
+          <div class="question-image-container">
+            <img id="question-image" class="question-image" src="" alt="" style="display: none;">
+          </div>
+          <h2 id="question-text" class="question">Carregando…</h2>
+          <div id="options" class="options"></div>
+          <div class="actions">
+            <button id="next-btn" class="btn btn--primary" hidden>Avançar</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="post1-screen" class="screen screen--center" hidden>
+        <div class="card">
+          <p class="lead romantic romantic--quote">Lembra quando pedi para voce assistir anime comigo, voce disse que era para ver se voce passava no meu teste? No final das contas você sabia que tinha algo por trás 😁.</p>
+          <div class="start-actions">
+            <button id="to-post2-btn" class="btn btn--primary">Próximo</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="post2-screen" class="screen screen--center" hidden>
+        <div class="card">
+          <p class="lead romantic romantic--quote">
+            Estou muito feliz por ter tido a sorte de te conhecer, pois é muito mais do que um dia eu sonhei pra mim. Estou disposto a fazer muitas coisas por você, como trocar a minha paz por um beijo seu, o meu destino para viver o seu, a minha cama para dormir na sua, trocar mil estrelas para te dar a lua, e se você quiser, te dou o meu sobrenome.
+          </p>
+          <div class="start-actions">
+            <button id="to-final-btn" class="btn btn--primary">Pergunta Final</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="final-screen" class="screen screen--center" hidden>
+        <div class="card card--final">
+          <h2>Quer namorar comigo?</h2>
+          <div class="final-actions">
+            <button id="yes-btn" class="btn btn--yes">Sim</button>
+            <button id="no-btn" class="btn btn--no">Não</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="celebration-screen" class="screen screen--center" hidden>
+        <div class="card card--celebration">
+          <div class="celebration-images-container">
+            <div class="celebration-image-wrapper">
+              <img src="./assets/images/eu e ela.jpeg" alt="Eu e ela" class="celebration-image">
+            </div>
+            <div class="celebration-content">
+              <h2>Você disse SIM!</h2>
+              <p>Que esse seja o começo de um capítulo lindo da nossa história.</p>
+            </div>
+            <div class="celebration-image-wrapper">
+              <img src="./assets/images/nos dois.jpeg" alt="Nós dois" class="celebration-image">
+            </div>
+          </div>
+        </div>
+        <div id="hearts-container" class="hearts" aria-hidden="true"></div>
+      </section>
+    </div>
+
+    <!-- Música de fundo (adicione o arquivo em ./assets/audio/tema.mp3) -->
+    <audio id="bg-audio" src="./assets/audio/tema.mp3" preload="auto" loop></audio>
+    <button id="audio-toggle" class="btn btn--ghost audio-toggle" hidden>Tocar música 🔊</button>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
